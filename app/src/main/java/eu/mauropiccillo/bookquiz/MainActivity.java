@@ -1,24 +1,15 @@
 package eu.mauropiccillo.bookquiz;
 
 import android.content.Context;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
      * Handle the clicks on radio buttons to empty the according RadioGroup
      */
     public void emptyClicks(View view) {
-        Log.i("MainActivity", "Clicked!");
         RadioGroup rg = (RadioGroup) view.getParent();
         switch (rg.getId()) {
             case R.id.question_1_1:
@@ -187,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
         if (answerTen.isChecked()) {
             score++;
         }
-        Log.i("MainActivity", "Score is: "+score);
         toastResult(score);
         return score;
     }
@@ -198,7 +187,6 @@ public class MainActivity extends AppCompatActivity {
         Context context = getApplicationContext();
         CharSequence text = "Thanks for taking the test " + playerName +"!\nYou got "+score+" out of 13 points!";
         if (playerName.equals("")) {
-            Log.i("MainActivity", "Name, bitch!");
             text = "Write your name to find out your score!";
         }
         int duration = Toast.LENGTH_LONG;
