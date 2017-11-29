@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,8 +12,10 @@
         android:layout_height="match_parent"
         android:src="@drawable/book"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/background_pic_desc"
         android:alpha="1"/>
     <ImageView
+        android:contentDescription="@string/background_pic_desc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000000"
@@ -27,23 +28,23 @@
         <LinearLayout
             android:id="@+id/main_linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Book Quiz!"
+                android:text="@string/header_text"
                 android:gravity="center"
                 android:textSize="48sp"/>
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome to a simple quiz to test your reading culture. This simple app will test your knowledge on book authors and history."/>
+                android:text="@string/intro_part1"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fill in your name and let's get started!"
+                android:text="@string/add_name"
                 android:gravity="center"/>
             <EditText
                 android:layout_marginTop="8dp"
@@ -53,7 +54,7 @@
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/input_name_hint"
                 android:text=""
                 android:textColor="#dcdcdc"
                 android:textColorHint="#dcdcdc"
@@ -64,12 +65,12 @@
                 android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chapter I: Authors"
+                android:text="@string/chapter1"
                 android:gravity="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='1. Who wrote "The Count of Monte Cristo"?'/>
+                android:text='@string/question1'/>
                 <RadioGroup
                     android:id="@+id/question_1_1"
                     android:layout_width="match_parent"
@@ -79,20 +80,16 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Harper Lee"/>
+                        android:text="@string/question1_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Jane Austen"/>
+                        android:text="@string/question1_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:id="@+id/question_1_2"
@@ -105,25 +102,21 @@
                         android:id="@+id/one_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Alexandre Dumas"/>
+                        android:text="@string/question1_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Victor Hugo"/>
+                        android:text="@string/question1_answer4"/>
                 </RadioGroup>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='2. Who wrote "Pride and Prejudice"?'/>
+                android:text='@string/question2'/>
                 <RadioGroup
                     android:id="@+id/question_2_1"
                     android:layout_width="match_parent"
@@ -133,21 +126,17 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Charlotte Brontë"/>
+                        android:text="@string/question2_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:id="@+id/two_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Jane Austen"/>
+                        android:text="@string/question2_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:id="@+id/question_2_2"
@@ -159,25 +148,21 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Luoisa May Alcott"/>
+                        android:text="@string/question2_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Nathaniel Hawthorne"/>
+                        android:text="@string/question2_answer4"/>
                 </RadioGroup>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='3. Who wrote "The Lord of the Rings"?'/>
+                android:text='@string/question3'/>
                 <RadioGroup
                     android:id="@+id/question_3_1"
                     android:layout_width="match_parent"
@@ -187,21 +172,17 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="C.S. Lewis"/>
+                        android:text="@string/question3_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:id="@+id/three_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="J.R.R. Tolkien"/>
+                        android:text="@string/question3_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:paddingBottom="8dp"
@@ -213,25 +194,21 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Kenneth Grahame"/>
+                        android:text="@string/question3_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Ken Follett"/>
+                        android:text="@string/question3_answer4"/>
                 </RadioGroup>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='4. Who wrote "The Picture of Dorian Gray"?'/>
+                android:text='@string/question4'/>
                 <RadioGroup
                     android:id="@+id/question_4_1"
                     android:layout_width="match_parent"
@@ -241,20 +218,16 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Aleister Crowley"/>
+                        android:text="@string/question4_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Joris Karl Huysmans"/>
+                        android:text="@string/question4_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:paddingBottom="8dp"
@@ -267,25 +240,21 @@
                         android:id="@+id/four_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Oscar Wilde"/>
+                        android:text="@string/question4_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Neil Gaiman"/>
+                        android:text="@string/question4_answer4"/>
                 </RadioGroup>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='5. Who wrote "The Great Gatsby"?'/>
+                android:text='@string/question5'/>
                 <RadioGroup
                     android:id="@+id/question_5_1"
                     android:layout_width="match_parent"
@@ -296,20 +265,16 @@
                         android:id="@+id/five_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="F. Scott Fitzgerald"/>
+                        android:text="@string/question5_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="J.D. Salinger"/>
+                        android:text="@string/question5_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:paddingBottom="8dp"
@@ -321,42 +286,33 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Ernest Hemingway"/>
+                        android:text="@string/question5_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="James Joyce"/>
+                        android:text="@string/question5_answer4"/>
                 </RadioGroup>
             <TextView
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chapter II: Dates"
+                android:text="@string/chapter2"
                 android:textSize="24sp"
                 android:gravity="center"/>
             <TextView
                 android:paddingBottom="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The next 3 questions have more than one answer to be selected. Selecting the wrong ones, however, will remove one point from your score, so don't try to cheat selecting everything!"/>
+                android:text="@string/chapter2_desc"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='6. Which of the following books were written in the 20th century?'/>
-            <LinearLayout
-                android:paddingBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text='@string/question6'/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -365,20 +321,16 @@
                         android:id="@+id/answer_six_one"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Dracula"/>
+                        android:text="@string/question6_answer1"/>
                     <CheckBox
                         android:id="@+id/answer_six_two"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Dubliners"/>
+                        android:text="@string/question6_answer2"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -388,31 +340,21 @@
                         android:id="@+id/answer_six_three"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Lolita"/>
+                        android:text="@string/question6_answer3"/>
                     <CheckBox
                         android:id="@+id/answer_six_four"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Anna Karenina"/>
+                        android:text="@string/question6_answer4"/>
                 </LinearLayout>
-            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='7. Which of the following books were written in the 19th century?'/>
-            <LinearLayout
-                android:paddingBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text='@string/question7'/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -421,20 +363,16 @@
                         android:id="@+id/answer_seven_one"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Wuthering Heights"/>
+                        android:text="@string/question7_answer1"/>
                     <CheckBox
                         android:id="@+id/answer_seven_two"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="A Christmas Carol"/>
+                        android:text="@string/question7_answer2"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -444,31 +382,21 @@
                         android:id="@+id/answer_seven_three"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Gulliver's Travels"/>
+                        android:text="@string/question7_answer3"/>
                     <CheckBox
                         android:id="@+id/answer_seven_four"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Robinson Crusoe"/>
+                        android:text="@string/question7_answer4"/>
                 </LinearLayout>
-            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='8. Which of the following books were written in the 18th century?'/>
-            <LinearLayout
-                android:paddingBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text='@string/question8'/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -477,21 +405,17 @@
                         android:id="@+id/answer_eight_one"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Romeo and Juliet"/>
+                        android:text="@string/question8_answer1"/>
                     <CheckBox
                         android:id="@+id/answer_eight_two"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
-                        android:text="The Wealth of Nations"/>
+                        android:text="@string/question8_answer2"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -501,26 +425,21 @@
                         android:id="@+id/answer_eight_three"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Candide"/>
+                        android:text="@string/question8_answer3"/>
                     <CheckBox
                         android:id="@+id/answer_eight_four"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Don Quixote"/>
+                        android:text="@string/question8_answer4"/>
                 </LinearLayout>
-            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='9. When was "1984" published?'/>
+                android:text='@string/question9'/>
                 <RadioGroup
                     android:id="@+id/question_9_1"
                     android:layout_width="match_parent"
@@ -530,20 +449,16 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1984"/>
+                        android:text="@string/question9_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1884"/>
+                        android:text="@string/question9_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:paddingBottom="8dp"
@@ -556,25 +471,21 @@
                         android:id="@+id/nine_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1949"/>
+                        android:text="@string/question9_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="2001"/>
+                        android:text="@string/question9_answer4"/>
                 </RadioGroup>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text='10. When was "Atlas Shrugged" published?'/>
+                android:text='@string/question10'/>
                 <RadioGroup
                     android:id="@+id/question_10_1"
                     android:layout_width="match_parent"
@@ -584,21 +495,17 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1994"/>
+                        android:text="@string/question10_answer1"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:id="@+id/ten_correct"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1957"/>
+                        android:text="@string/question10_answer2"/>
                 </RadioGroup>
                 <RadioGroup
                     android:paddingBottom="8dp"
@@ -610,37 +517,33 @@
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1773"/>
+                        android:text="@string/question10_answer3"/>
                     <RadioButton
                         android:onClick="emptyClicks"
                         android:textColor="#dcdcdc"
                         android:layout_weight="1"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="1862"/>
+                        android:text="@string/question10_answer4"/>
                 </RadioGroup>
             <TextView
                 android:paddingBottom="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The End"
+                android:text="@string/end"
                 android:textSize="24sp"
                 android:gravity="center"/>
             <TextView
                 android:paddingBottom="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Thank you for taking this test! Press submit to find out your score!"/>
+                android:text="@string/outro"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:layout_gravity="center"
                 android:background="#007304"
                 android:onClick="getScore"/>
